@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Class 10th</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon123.png" rel="icon">
+
+
+
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+    }
+
+
+    .wrap {
+      height: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .wrap .perspective {
+      width: 100%;
+      height: 100%;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      overflow: hidden;
+    }
+
+    .book-wrap {
+      height: 100%;
+      width: 100%;
+      transform-style: preserve-3d;
+      transition: all ease-out 0.6s;
+      -webkit-transition: all ease-out 0.6s;
+      -moz-transition: all ease-out 0.6s;
+      -ms-transition: all ease-out 0.6s;
+      -o-transition: all ease-out 0.6s;
+    }
+
+    .book {
+      width: 400px;
+      height: 600px;
+      background: url(http://img07.deviantart.net/747c/i/2015/114/b/0/typography_book_cover_thing_y_by_jiyulie-d5cujji.jpg) no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer;
+    }
+
+    .title {
+      content: "";
+      height: 600px;
+      width: 30px;
+      position: absolute;
+      right: 0;
+      left: -401px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #AB4747;
+      transform: rotateY(-80deg) translateX(-14px);
+    }
+
+    .book-back {
+      width: 400px;
+      height: 600px;
+      background-color: #D06255;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer;
+      transform: rotate(180deg) translateZ(-30px) translateX(5px);
+    }
+
+    .book-back .text {
+      transform: rotateX(180deg);
+      position: absolute;
+      bottom: 30px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .book-back .text h3 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .book-back .text span {
+      display: block;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .book-back .text span:last-of-type {
+      margin-top: 30px;
+    }
+
+    .rotate {
+      transform: rotateY(20deg);
+    }
+
+    .flip {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<style>
+  .ag-format-container {
+    /* width: 1142px; */
+    margin: 0 auto;
+
+  }
+
+
+  body {
+    /* background-color: #000; */
+    /* background-color: #f6f9ff; */
+    background-color: #f2f5fc;
+
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+
+    padding: 50px 0;
+  }
+
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+
+    margin: 0 15px 30px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    /* background-color: #fff0ea; */
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    overflow: hidden;
+
+    position: relative;
+
+  }
+
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+
+  .ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+
+    overflow: hidden;
+
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+
+    z-index: 2;
+    position: relative;
+  }
+
+  .ag-courses-item_date-box {
+    font-size: 18px;
+    color: #FFF;
+
+    z-index: 2;
+    position: relative;
+  }
+
+  .ag-courses-item_date {
+    font-weight: bold;
+    color: #eb5d1e;
+
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+  }
+
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+
+    border-radius: 50%;
+
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+    background-color: #6cc880;
+  }
+
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: #d27f61;
+  }
+
+  .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+    background-color: #9d69d2;
+  }
+
+  .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+    background-color: #ca73a7;
+  }
+
+  .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+    background-color: #7876dd;
+  }
+
+  .ag-courses_item {
+  transition: transform 0.3s; /* Add smooth transition for the effect */
+  }
+
+  .ag-courses_item:hover {
+  transform: scale(1.1); /* Scale the div by 10% when hovered */
+  }
+
+
+
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+
+  }
+
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+
+      font-size: 24px;
+    }
+
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <style>
+        @media screen and (max-width: 768px) {
+          .header .logo span {
+            font-size: 20px;
+          }
+        }
+      </style>
+
+      <a href="/index.html" class="logo d-flex align-items-center">
+        <img src="/assets/img/preranainstituteNavbarlogo.png" alt="">
+        <span>Prerana Institute</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto active" href="#">LINK</a></li> -->
+          <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#Whyus">Why Us?</a></li>
+          <li><a class="nav-link scrollto" href="#Course">Course</a></li>
+          <li><a class="nav-link scrollto" href="#FrequentlyAsked">Frequently Asked</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#OurTeam">Our Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="classes.html">Notes</a></li> -->
+
+          <!-- <li> <a href="#" class="btn btn-sm  ms-3 px-4 py-3" data-bs-toggle="modal" data-bs-target="#kt_Change_Password">Notes</a></li> -->
+
+          <li><a class="getstarted scrollto" href="/index.html">Log Out</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+  
+
+    <section>
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-12" style="position: relative; top: 65px; text-align: center;">
+    
+                    <style>
+                        h1 {
+                            font-size: 30px;
+                            font-weight: 500;
+                            /* font-family: sans-serif; */
+                            color: black;
+                            font-family: 'Nunito', sans-serif;
+                        }
+    
+                        .underlined {
+                            position: relative;
+                        }
+    
+                        .underline-mask:after {
+                            content: '';
+                            position: absolute;
+                            top: 95%;
+                            width: 150%;
+                            aspect-ratio: 3 / 1;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            border-radius: 50%;
+                            border: 6px solid hsl(280 80% 50%);
+                            /* Use a conic gradient mask to hide and show the bits you want */
+                            --spread: 140deg;
+                            --start: 290deg;
+                            mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+                        }
+    
+    
+                        .underline-overflow {
+                            display: inline-block;
+                            /* A little extra padding and overflow hidden   */
+                            overflow: hidden;
+                            padding-bottom: clamp(1rem, 2vmin, 2rem);
+                        }
+    
+                        .underline-overflow:after {
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            height: 150%;
+                            aspect-ratio: 2.5 / 1;
+                            left: 50%;
+                            transform: translate(-50%, -10%);
+                            border-radius: 50%;
+                            border: 6px solid hsl(10 80% 50%);
+                        }
+    
+                        .underline-clip:after {
+                            content: '';
+                            position: absolute;
+                            top: 95%;
+                            width: 150%;
+                            aspect-ratio: 3 / 1;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            border-radius: 50%;
+                            border: 6px solid hsl(130 80% 50%);
+                            /* Use a clip-path to hide and show the bits you want */
+                            clip-path: polygon(0 0, 50% 50%, 100% 0);
+                        }
+                    </style>
+
+                    <h1 style="font-weight: bold;">Welcome to Class<span class="underlined underline-clip"> 10th<span style="color: #f2f5fc;">--</span></span>
+
+    
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-12 entries" style="position: relative; top: -85px;">
+
+            
+            <div class="ag-format-container">
+              <div class="ag-courses_box">
+
+              
+
+                <div class="ag-courses_item">
+                  <a href="/NotesClass10/Class10Math.html" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                      Math
+                    </div>
+
+                    <div class="ag-courses-item_date-box">
+
+                      <span class="ag-courses-item_date">
+                        Prerana Institute
+                        <!-- Click for more ->  -->
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="ag-courses_item">
+                  <a href="/NotesClass10/Class10Science.html" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Science 
+                    </div>
+
+                    <div class="ag-courses-item_date-box">
+                      <span class="ag-courses-item_date">
+                        Prerana Institute
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="ag-courses_item">
+                  <a href="/NotesClass10/Class10Social.html" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Social
+                    </div>
+
+                    <div class="ag-courses-item_date-box">
+                      <span class="ag-courses-item_date">
+                        Prerana Institute
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="ag-courses_item">
+                  <a href="/NotesClass10/Class10Hindi.html" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                      Hindi
+                    </div>
+
+                    <div class="ag-courses-item_date-box">
+                      <span class="ag-courses-item_date">
+                        Prerana Institute
+                      </span>
+                    </div>
+                  </a>
+                </div>
+
+                
+
+
+               
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+    <!-- <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <div class="blog-author d-flex align-items-center">
+              <img src="/assets/img/blog/blog-author.jpg" class="rounded-circle float-left" alt="">
+              <div>
+                <h4>Jane Smith</h4>
+                <div class="social-links">
+                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+                </p>
+              </div>
+            </div>
+
+            <div class="blog-comments">
+
+             
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div>
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="#">General <span>(25)</span></a></li>
+                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                  <li><a href="#">Travel <span>(5)</span></a></li>
+                  <li><a href="#">Design <span>(22)</span></a></li>
+                  <li><a href="#">Creative <span>(8)</span></a></li>
+                  <li><a href="#">Educaion <span>(14)</span></a></li>
+                </ul>
+              </div>
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-1.jpg" alt="">
+                  <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-2.jpg" alt="">
+                  <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-3.jpg" alt="">
+                  <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-4.jpg" alt="">
+                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-5.jpg" alt="">
+                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+              </div>
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Office</a></li>
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Studio</a></li>
+                  <li><a href="#">Smart</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <!-- <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <div class="blog-author d-flex align-items-center">
+              <img src="/assets/img/blog/blog-author.jpg" class="rounded-circle float-left" alt="">
+              <div>
+                <h4>Jane Smith</h4>
+                <div class="social-links">
+                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                  <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                </div>
+                <p>
+                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+                </p>
+              </div>
+            </div>
+
+            <div class="blog-comments">
+
+             
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div>
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="#">General <span>(25)</span></a></li>
+                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                  <li><a href="#">Travel <span>(5)</span></a></li>
+                  <li><a href="#">Design <span>(22)</span></a></li>
+                  <li><a href="#">Creative <span>(8)</span></a></li>
+                  <li><a href="#">Educaion <span>(14)</span></a></li>
+                </ul>
+              </div>
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-1.jpg" alt="">
+                  <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-2.jpg" alt="">
+                  <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-3.jpg" alt="">
+                  <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-4.jpg" alt="">
+                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="/assets/img/blog/blog-recent-5.jpg" alt="">
+                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+              </div>
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Office</a></li>
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Studio</a></li>
+                  <li><a href="#">Smart</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+
+  </main>
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+    $(".book").mouseenter(function () {
+      $(this).parent(".book-wrap").addClass("rotate");
+    });
+
+    $(".book").mouseleave(function () {
+      $(this).parent(".book-wrap").removeClass("rotate");
+    });
+
+    $(".book").click(function () {
+      $(this).parent(".book-wrap").addClass("flip");
+    });
+
+    $(".book-back").click(function () {
+      $(this).parent(".book-wrap").removeClass("flip");
+    });
+  </script>
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

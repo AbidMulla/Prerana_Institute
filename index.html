@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Prerana Institute</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="./assets/img/favicon123.png" rel="icon">
+ 
+   
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- This is Navigation Bar  -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="./assets/img/preranainstituteNavbarlogo.png" alt="">
+        <span>Prerana&nbsp;</span><span>Institute</span>
+      </a>
+      
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto active" href="#">LINK</a></li> -->
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#Whyus">Why Us?</a></li>
+          <li><a class="nav-link scrollto" href="#Course">Course</a></li>
+          <li><a class="nav-link scrollto" href="#FrequentlyAsked">Frequently Asked</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#OurTeam">Our Team</a></li> -->
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto notes" data-bs-toggle="modal" data-bs-target="#kt_user_Password">Notes</a></li>
+          <li><a class="nav-link scrollto notes" data-bs-toggle="modal" data-bs-target="#kt_admin_Password">Admin</a></li>
+          <style>
+            .notes:hover {
+              cursor: pointer;
+            }
+          </style>
+      
+      
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+      
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  
+  <div class="modal fade" id="kt_user_Password" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mw-900px">
+        <div class="modal-content" style="padding: 0px 31px;">
+            <button type="button" style="position: absolute; right: 0; padding: 20px 20px;" class="btn-close close-button"
+                data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <div class="modal-body py-lg-10 px-lg-10">
+                <div id="kt_modal_create_app_stepper">
+                    <div class="flex-row-fluid py-lg-5 px-lg-15">
+                        <form class="form w-100" action="Notes.html" onsubmit="return validateFormUser()">
+                            <h1 class="text-dark mb-3" style="text-align: center; font: 20px; font-weight: bold;">Login</h1>
+
+                            <div class="fv-row mb-10">
+                                <label class="form-label fs-6 fw-bold text-dark">Email</label>
+                                <input class="form-control form-control-lg form-control-solid" type="text" id="emailUser"
+                                    name="email" autocomplete="off" />
+                                <div id="emailErrorUser" class="text-danger mt-2"></div>
+                            </div>
+
+                            <!-- User Email validation -->
+                            <script>
+                                function validateEmailUser() {
+                                    var emailInput = document.getElementById('emailUser');
+                                    var emailError = document.getElementById('emailErrorUser');
+                                    var emailValue = emailInput.value.trim();
+
+                                    if (emailValue === '') {
+                                        emailError.textContent = 'Email is required.';
+                                        return false;
+                                    }
+
+                                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                    if (!emailRegex.test(emailValue)) {
+                                        emailError.textContent = 'Invalid email format.';
+                                        return false;
+                                    }
+
+                                    emailError.textContent = '';
+                                    return true;
+                                }
+
+                                document.getElementById('emailUser').addEventListener('input', validateEmailUser);
+                            </script>
+
+                            <div class="fv-row mb-2">
+                                <div class="d-flex flex-stack mb-2">
+                                    <label class="form-label fw-bold text-dark fs-6 mb-0">Password</label>
+                                </div>
+                                <input class="form-control form-control-lg form-control-solid" type="password"
+                                    id="passwordUser" name="password" autocomplete="off" />
+                                <div id="passwordErrorUser" class="text-danger mt-2"></div>
+                            </div>
+
+                            <!-- User Password validation -->
+                            <script>
+                                function validatePasswordUser() {
+                                    var passwordInput = document.getElementById('passwordUser');
+                                    var passwordError = document.getElementById('passwordErrorUser');
+                                    var passwordValue = passwordInput.value.trim();
+
+                                    if (passwordValue === '') {
+                                        passwordError.textContent = 'Password is required.';
+                                        return false;
+                                    }
+
+                                    if (passwordValue.length < 8) {
+                                        passwordError.textContent = 'Password must be at least 8 characters.';
+                                        return false;
+                                    }
+
+                                    passwordError.textContent = '';
+                                    return true;
+                                }
+
+                                document.getElementById('passwordUser').addEventListener('input', validatePasswordUser);
+                            </script>
+
+                            <div style="display: flex; justify-content: space-between">
+                                <div class="fv-row mb-10">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefaultUser"
+                                        onclick="togglePasswordVisibility('passwordUser')">
+                                    <label class="form-check-label text-gray-600" for="flexCheckDefaultUser">
+                                        Show Password
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-lg w-100 mb-5" style="background-color: #eb5d1e;">
+                                    <span class="indicator-label" style="color: white;">Continue</span>
+                                </button>
+                            </div>
+                            <div id="formErrorUser" class="text-danger" style="text-align: center;"></div>
+                        </form>
+
+                        <script>
+                            function togglePasswordVisibility(inputId) {
+                                var x = document.getElementById(inputId);
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                    document.getElementById("flexCheckDefaultUser").checked = true;
+                                } else {
+                                    x.type = "password";
+                                    document.getElementById("flexCheckDefaultUser").checked = false;
+                                }
+                            }
+
+                            function validateFormUser() {
+                                var validEmail = validateEmailUser();
+                                var validPassword = validatePasswordUser();
+
+                                if (validEmail && validPassword) {
+                                    var emailInput = document.getElementById('emailUser').value;
+                                    var passwordInput = document.getElementById('passwordUser').value;
+
+                                    if (emailInput === 'institute.prerana@gmail.com' && passwordInput === 'institute.prerana@123Bangalore') {
+                                        window.location.href = "Notes.html";
+                                    } else {
+                                        document.getElementById('formErrorUser').textContent = 'Incorrect email or password.';
+                                        return false;
+                                    }
+                                } else {
+                                    return false;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- admin Password Module -->
+<div class="modal fade" id="kt_admin_Password" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mw-900px">
+        <div class="modal-content" style="padding: 0px 31px;">
+            <button type="button" style="position: absolute; right: 0; padding: 20px 20px;" class="btn-close close-button"
+                data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <div class="modal-body py-lg-10 px-lg-10">
+                <div id="kt_modal_create_app_stepper">
+                    <div class="flex-row-fluid py-lg-5 px-lg-15">
+                        <form class="form w-100" action="AdminPanel/AllBoard.html" onsubmit="return validateFormAdmin()">
+                            <h1 class="text-dark mb-3" style="text-align: center; font: 20px; font-weight: bold;">Login</h1>
+
+                            <div class="fv-row mb-10">
+                                <label class="form-label fs-6 fw-bold text-dark">Email admin</label>
+                                <input class="form-control form-control-lg form-control-solid" type="text" id="emailAdmin"
+                                    name="email" autocomplete="off" />
+                                <div id="emailErrorAdmin" class="text-danger mt-2"></div>
+                            </div>
+
+                            <!-- Admin Email validation -->
+                            <script>
+                                function validateEmailAdmin() {
+                                    var emailInput = document.getElementById('emailAdmin');
+                                    var emailError = document.getElementById('emailErrorAdmin');
+                                    var emailValue = emailInput.value.trim();
+
+                                    if (emailValue === '') {
+                                        emailError.textContent = 'Email is required.';
+                                        return false;
+                                    }
+
+                                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                    if (!emailRegex.test(emailValue)) {
+                                        emailError.textContent = 'Invalid email format.';
+                                        return false;
+                                    }
+
+                                    emailError.textContent = '';
+                                    return true;
+                                }
+
+                                document.getElementById('emailAdmin').addEventListener('input', validateEmailAdmin);
+                            </script>
+
+                            <div class="fv-row mb-2">
+                                <div class="d-flex flex-stack mb-2">
+                                    <label class="form-label fw-bold text-dark fs-6 mb-0">Password</label>
+                                </div>
+                                <input class="form-control form-control-lg form-control-solid" type="password"
+                                    id="passwordAdmin" name="password" autocomplete="off" />
+                                <div id="passwordErrorAdmin" class="text-danger mt-2"></div>
+                            </div>
+
+                            <!-- Admin Password validation -->
+                            <script>
+                                function validatePasswordAdmin() {
+                                    var passwordInput = document.getElementById('passwordAdmin');
+                                    var passwordError = document.getElementById('passwordErrorAdmin');
+                                    var passwordValue = passwordInput.value.trim();
+
+                                    if (passwordValue === '') {
+                                        passwordError.textContent = 'Password is required.';
+                                        return false;
+                                    }
+
+                                    if (passwordValue.length < 8) {
+                                        passwordError.textContent = 'Password must be at least 8 characters.';
+                                        return false;
+                                    }
+
+                                    passwordError.textContent = '';
+                                    return true;
+                                }
+
+                                document.getElementById('passwordAdmin').addEventListener('input', validatePasswordAdmin);
+                            </script>
+
+                            <div style="display: flex; justify-content: space-between">
+                                <div class="fv-row mb-10">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefaultAdmin"
+                                        onclick="togglePasswordVisibility('passwordAdmin')">
+                                    <label class="form-check-label text-gray-600" for="flexCheckDefaultAdmin">
+                                        Show Password
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-lg w-100 mb-5" style="background-color: #eb5d1e;">
+                                    <span class="indicator-label" style="color: white;">Continue</span>
+                                </button>
+                            </div>
+                            <div id="formErrorAdmin" class="text-danger" style="text-align: center;"></div>
+                        </form>
+
+                        <script>
+                            function togglePasswordVisibility(inputId) {
+                                var x = document.getElementById(inputId);
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                    document.getElementById("flexCheckDefaultAdmin").checked = true;
+                                } else {
+                                    x.type = "password";
+                                    document.getElementById("flexCheckDefaultAdmin").checked = false;
+                                }
+                            }
+
+                            function validateFormAdmin() {
+                                var validEmail = validateEmailAdmin();
+                                var validPassword = validatePasswordAdmin();
+
+                                if (validEmail && validPassword) {
+                                    var emailInput = document.getElementById('emailAdmin').value;
+                                    var passwordInput = document.getElementById('passwordAdmin').value;
+
+                                    if (emailInput === 'admin.prerana@gmail.com' && passwordInput === 'admin.prerana@123Bangalore') {
+                                        window.location.href = "AdminPanel/AllBoard.html";
+                                    } else {
+                                        document.getElementById('formErrorAdmin').textContent = 'Incorrect email or password.';
+                                        return false;
+                                    }
+                                } else {
+                                    return false;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- This is LandingPage -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up" style="color: #eb5d1e;width: 1200;">PRERANA INSTITUTE</h1>
+          <h1 data-aos="fade-up">Life Coaching for Teens and Young Adults</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">We don't just coach for exams; we coach for life.</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about"
+                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="./assets/img/replicate-prediction-gymwnrjbkuh5oq7criwbznxv4q.png" class="img-fluid" alt="">
+          <!-- <img src="./assets/img/replicate-prediction-bwo5lqjbjgvni75k6tl6ro4auq.png" class="img-fluid" alt="">  -->
+          <!-- <img src="./assets/img/hero-img.png" class="img-fluid" alt="">  -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- This is First Section  -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+
+              <h2>FROM 7th To PUC SCIENCE & COMMERCE.</h2>
+              <h3>CBSE/ICSE/STATE/IGCSE</h3>
+              <p>
+                Our emphasis lies in fostering conceptual learning and conducting regular assessments of students.
+              </p>
+              <!-- <div class="text-center text-lg-start">
+                <a href="#  features" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="./assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us?  -->
+    <section id="features" class="features">
+
+      <div class="container" data-aos="fade-up" id="Whyus">
+
+        <header class="section-header">
+          <h2>Features</h2>
+          <p>Why Us?</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <img src="./assets/img/features.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Accomplished Tutors</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Performance Mapping</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Library Facility</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Memory & Study Skill</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Small Batch Size</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Career Guidance</h3>
+                </div>
+              </div>
+
+              <div style="font-weight: bold;" class="col-md-12 icon-box text-center" data-aos="fade-up">
+                <!-- <i class="ri-line-chart-line"></i> -->
+                <div>
+                  <h4 style="font-weight: bold; align-items: center; color: #eb5d1e;">We Also Offer</h4>
+                </div>
+              </div>
+
+              <div style="font-weight: bold;" class="col-md-6 icon-box" data-aos="fade-up">
+                <!-- <i class="ri-line-chart-line"></i> -->
+                <div>
+                  <h4 style="font-weight: bold;">Coding and Robotronics</h4>
+                  <p style="font-weight: bold;">Age 6-8 Years</p>
+                </div>
+              </div>
+              <div style="font-weight: bold;" class="col-md-6 icon-box" data-aos="fade-up">
+                <!-- <i class="ri-line-chart-line"></i> -->
+                <div>
+                  <h4 style="font-weight: bold;">Remedial Coaching</h4>
+                  <p style="font-weight: bold;">3rd - 12th Std</p>
+                </div>
+              </div>
+              <div style="font-weight: bold;" class="col-md-12 icon-box text-center" data-aos="fade-up">
+                <!-- <i class="ri-line-chart-line"></i> -->
+                <!-- <div>
+                  <h4  style="font-weight: bold; align-items: center;">After School Enrichment Programs</h4>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+
+        </div> <!-- / row -->
+
+        <div class="row feture-tabs" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h3>We offer coding classes for kids that are self-paced and tailored to match each child's unique learning
+              style.</h3>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li>
+                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Coding Languages</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">More</a>
+              </li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+              <div class="tab-pane fade show active" id="tab1">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>C programming language</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>C ++</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>HTML (HyperText Markup Language)</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>CSS &nbsp; &nbsp; (Cascading Style Sheets)</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>Java Script</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>Python</h4>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>Raspberry Pi</h4>
+                </div>
+              </div>
+
+              <div class="tab-pane fade show" id="tab2">
+                <p></p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2" style="color: #eb5d1e;"></i>
+                  <h4>Solo & Group Training Programs</h4>
+                </div>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; Age Group : 6 to 18 Years</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;Automation</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;Sensor Interfaccing</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;Encourage to think across</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;Multiple domains</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp;Electronic circuitry construction</p>
+                <div class="d-flex align-items-center mb-2">
+                </div>
+
+
+              </div><!-- End Tab 2 Content -->
+
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="./assets/img/features-2.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- This is Courses -->
+    <section id="testimonials" class="testimonials">
+
+      <div class="container" data-aos="fade-up" id="Course">
+        <header class="section-header">
+          <!-- <h2>Testimonials</h2> -->
+          <p>Most Popular Courses</p>
+        </header>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+
+            <!-- First  -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  All the way from basic art techniques, to complex 2D & 3D masterpieces.</p>
+                <h3>Art Classes</h3>
+                <div class="profile mt-auto">
+                  <!-- <img src="./assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
+                  <!-- <h4>Designer</h4> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Second  -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Intense strategies and skills designed with an emphasis on increased reading comprehension and
+                  vocabulary acquisition. </p>
+                <h3>Reading Classes</h3>
+                <div class="profile mt-auto">
+                  <!-- <img src="./assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
+                  <!-- <h4>Store Owner</h4> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- third  -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Learn how to process and internalize information in a highly-effective way, and how to apply this to
+                  acquire other skills.
+                </p>
+                <h3>Memory Training</h3>
+                <div class="profile mt-auto">
+                  <!-- <img src="./assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
+                  <!-- <h4>Freelancer</h4> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Four  -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Traditional way of Veda Chanting using the web-based technology in this modern era. </p>
+                <h3>Veda Classes</h3>
+                <div class="profile mt-auto">
+                  <!-- <img src="./assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
+                  <!-- <h4>Entrepreneur</h4> -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Frequently asked Questions -->
+    <section id="faq" class="faq">
+
+      <div class="container" data-aos="fade-up" id="FrequentlyAsked">
+
+        <header class="section-header">
+          <h2>F.A.Q</h2>
+          <p>Frequently Asked Questions</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- F.A.Q List 1-->
+            <div class="accordion accordion-flush" id="faqlist1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-1">
+                    Will the teachers also help with school homework? </button>
+                </h2>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Any doubts from students will be addressed by the teachers during the session. After each session,
+                    tests and worksheets will be assigned as homework for the students. The homework will be assessed by
+                    the teachers</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-2">
+                    Do you give homework? </button>
+                </h2>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Yes, homework will be provided after every class. </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+
+            <!-- F.A.Q List 2-->
+            <div class="accordion accordion-flush" id="faqlist2">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-3">
+                    If my child has not understood a concept taught in the class can the same concept be explained
+                    again? </button>
+                </h2>
+                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Yes, our teachers will gladly re-teach concepts which have not been properly understood by the
+                    child. </div>
+                </div>
+              </div>
+
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2-content-1">
+                    For more questions.
+                </h2>
+                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    For more information send us an email or call us.
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- This is  certificates -->
+    <section id="counts" class="counts">
+      <header class="section-header">
+
+        <p>There are certificates for all the courses.</p>
+      </header>
+      <div class="container" data-aos="fade-up">
+
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Quality Course</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Experience Mentors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- This is fortfolio  -->
+    <section id="portfolio" class="portfolio">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Portfolio</h2>
+          <p>Check our photos</p>
+        </header>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Arts</li>
+              <li data-filter=".filter-card">Student & Teacher</li>
+              <!-- <li data-filter=".filter-web">Web</li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- This is app  -->
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="./assets/img/portfolio/art-1.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <!-- <h4>App 1</h4>
+                <p>App</p> -->
+                <div class="portfolio-links">
+                  <a href="./assets/img/portfolio/art-1.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox"
+                    ><i class="bi bi-plus"></i></a>
+                  <!-- <a href="#" title="More Details"><i class="bi bi-link"></i></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="./assets/img/portfolio/pic-2.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <!-- <h4>Card 1</h4>
+                <p>Card</p> -->
+                <div class="portfolio-links">
+                  <a href="./assets/img/portfolio/pic-2.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox"
+                    ><i class="bi bi-plus"></i></a>
+                  <!-- <a href="#" title="More Details"><i class="bi bi-link"></i></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- This is app  -->
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="./assets/img/portfolio/art-2.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <!-- <h4>App 1</h4>
+                <p>App</p> -->
+                  <div class="portfolio-links">
+                    <a href="./assets/img/portfolio/art-2.jpeg" data-gallery="portfolioGallery"
+                      class="portfokio-lightbox" ><i class="bi bi-plus"></i></a>
+                    <!-- <a href="#" title="More Details"><i class="bi bi-link"></i></a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- This is app  -->
+            <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <img src="./assets/img/portfolio/art-3.jpeg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <!-- <h4>App 1</h4>
+                <p>App</p> -->
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/art-3.jpeg" data-gallery="portfolioGallery"
+                        class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                      <!-- <a href="#" title="More Details"><i class="bi bi-link"></i></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- This is Cards  -->
+              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                  <img src="./assets/img/portfolio/pic-1.jpeg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <!-- <h4>Card 1</h4>
+                    <p>Card</p> -->
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/pic-1.jpeg" data-gallery="portfolioGallery"
+                        class="portfokio-lightbox" ><i class="bi bi-plus"></i></a>
+                      <!-- <a href="#" title="More Details"><i class="bi bi-link"></i></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                  <img src="./assets/img/portfolio/pic-3.jpeg" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <!-- <h4>Card 1</h4>
+                    <p>Card</p> -->
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/pic-3.jpeg" data-gallery="portfolioGallery"
+                        class="portfokio-lightbox" ><i class="bi bi-plus"></i></a>
+                      <!-- <a href="#" title="More Details"><i class="bi bi-link"></i></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- web  -->
+              <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="./assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="./assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="#" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+            </div>
+
+          </div>
+        </div>
+
+    </section>
+
+
+    <!-- This is Our team  -->
+    <!-- <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up" id="OurTeam">
+
+        <header class="section-header">
+          <h2>Team</h2>
+          <p>Our hard working team</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mahesh Sir</h4>
+                <span>Chief Executive Officer</span>
+                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Priya ma'am</h4>
+                <span>Product Manager</span>
+                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Viji Ma'am</h4>
+                <span>CTO</span>
+                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="./assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Demo</h4>
+                <span>Accountant</span>
+                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+
+    <!-- This is Contact us -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </header>
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i style="color: #eb5d1e;" class="bi bi-geo-alt"></i>
+                  <h3 style="color: black;">Address</h3>
+                  <p>#22, 100ft Road, 15th Cross ,<br> 4th Phase, JP Nagar, Bengaluru, Karnataka-560078, INDIA</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i style="color: #eb5d1e;" class="bi bi-telephone"></i>
+                  <h3 style="color: black;">Call Us</h3>
+                  <p>+91 80733 65724<br></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i style="color: #eb5d1e;" class="bi bi-envelope"></i>
+                  <h3 style="color: black;">Email Us</h3>
+                  <p>inspire@preranainstitute.org</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i style="color: #eb5d1e;" class="bi bi-clock"></i>
+                  <h3 style="color: black;">Open Hours</h3>
+                  <p>Monday - Saturday<br>4:00PM - 07:00PM</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="https://formsubmit.co/institute.prerana@gmail.com" method="post">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn btn-primary" style="background-color: #eb5d1e; border: none;">Send
+                    Message</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- This is footer  -->
+  <footer id="footer" class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="./assets/img/logo.png" alt="">
+              <span style="color: black;"> Social Media </span>
+            </a>
+            <div class="social-links mt-3">
+              <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
+              <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+              <a href="https://www.instagram.com/prerana.institute/" class="instagram"><i
+                  class="bi bi-instagram"></i></a>
+              <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+
+            <h4 style="color: black;">Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#Whyus">Why us?</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#Course">Course</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#FrequentlyAsked">Frequently Asked</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Portfolio</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Our Team</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 style="color: black;">Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Acadamic Coaching</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Coding</a></li>
+              <!-- <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4 style="color: black;">Contact Us</h4>
+            <p>
+              #22, 100ft Road, 15th Cross ,<br> 4th Phase, JP Nagar,<br> Bengaluru, Karnataka-560078, INDIA<br>
+
+              <strong>Phone:</strong> +91 80733 65724 <br>
+              <strong>Email:</strong> inspire@preranainstitute.org<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span style="color: black;">Prerana Institute</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by.<a href="https://ellipsonic.com/">ELLIPSONIC INDIA SOLUTIONS PVT. LTD</a>
+      </div>
+    </div>
+
+  </footer>
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="./assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="./assets/vendor/aos/aos.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

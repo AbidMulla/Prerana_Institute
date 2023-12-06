@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>12 Commerce Accounts</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/assets/img/favicon123.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <style>
+        .ag-format-container {
+            /* width: 1142px; */
+            margin: 0 auto;
+
+        }
+
+
+        body {
+            /* background-color: #000; */
+            /* background-color: #f6f9ff; */
+            background-color: #f2f5fc;
+
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .ag-courses_box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+
+            padding: 50px 0;
+        }
+
+        .ag-courses_item {
+            -ms-flex-preferred-size: calc(33.33333% - 30px);
+            flex-basis: calc(33.33333% - 30px);
+
+            margin: 0 15px 30px;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .ag-courses-item_link {
+            display: block;
+            padding: 30px 20px;
+            /* background-color: #fff0ea; */
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            overflow: hidden;
+
+            position: relative;
+
+        }
+
+        .ag-courses-item_link p {
+            color: black;
+            text-align: center;
+        }
+
+        .ag-courses-item_link:hover,
+        .ag-courses-item_link:hover .ag-courses-item_date {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* .ag-courses-item_link:hover .ag-courses-item_bg {
+        -webkit-transform: scale(10);
+        -ms-transform: scale(10);
+        transform: scale(10);
+      } */
+
+        .ag-courses-item_title {
+            /* min-height: 87px; */
+            margin: 0 0 25px;
+
+            overflow: hidden;
+
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+            color: #000000;
+
+            z-index: 2;
+            position: relative;
+        }
+
+        .ag-courses-item_date-box {
+            font-size: 18px;
+            color: #FFF;
+
+            z-index: 2;
+            position: relative;
+        }
+
+        .ag-courses-item_date {
+            font-weight: bold;
+            color: #eb5d1e;
+
+            -webkit-transition: color .5s ease;
+            -o-transition: color .5s ease;
+            transition: color .5s ease
+        }
+
+        .ag-courses-item_bg {
+            height: 128px;
+            width: 128px;
+            /* background-color: #f9b234;    */
+
+            z-index: 1;
+            position: absolute;
+            top: -75px;
+            right: -75px;
+
+            border-radius: 50%;
+
+            -webkit-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+
+        /* .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+        background-color: #6cc880;
+      }
+    
+      .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+        background-color: #d27f61;
+      }
+    
+      .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+        background-color: #9d69d2;
+      }
+    
+      .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+        background-color: #ca73a7;
+      }
+    
+      .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+        background-color: #7876dd;
+      } */
+
+        .ag-courses_item {
+            transition: transform 0.3s;
+            /* Add smooth transition for the effect */
+        }
+
+        .ag-courses_item:hover {
+            transform: scale(1.1);
+            /* Scale the div by 10% when hovered */
+        }
+
+
+
+        @media only screen and (max-width: 979px) {
+            .ag-courses_item {
+                -ms-flex-preferred-size: calc(50% - 30px);
+                flex-basis: calc(50% - 30px);
+            }
+
+            .ag-courses-item_title {
+                font-size: 15px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .ag-format-container {
+                width: 96%;
+            }
+
+        }
+
+        @media only screen and (max-width: 639px) {
+            .ag-courses_item {
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+
+            .ag-courses-item_title {
+                /* min-height: 72px; */
+                line-height: 1;
+
+                font-size: 15px;
+            }
+
+            .ag-courses-item_link p {
+                /* min-height: 72px; */
+                /* line-height: 1; */
+
+                font-size: 10px;
+            }
+
+            .ag-courses-item_link {
+                padding: 22px 40px;
+            }
+
+
+
+            .ag-courses-item_date-box {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- This is Heading  -->
+    <header id="header" class="header fixed-top" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <style>
+                @media screen and (max-width: 768px) {
+                    .header .logo span {
+                        font-size: 20px;
+                    }
+                }
+            </style>
+
+            <a href="/index.html" class="logo d-flex align-items-center">
+                <img src="/assets/img/preranainstituteNavbarlogo.png" alt="">
+                <span>Prerana Institute</span>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="getstarted scrollto" href="/index.html">Log Out</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+
+    </header>
+
+    <main id="main">
+
+
+        <!-- This is heading  -->
+        <section>
+
+            <div class="container-fluid" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-12" style="position: relative; top: 65px; text-align: center;">
+
+                        <style>
+                            h1 {
+                                font-size: 30px;
+                                font-weight: 500;
+                                /* font-family: sans-serif; */
+                                color: black;
+                                font-family: 'Nunito', sans-serif;
+                            }
+
+                            .underlined {
+                                position: relative;
+                            }
+
+                            .underline-mask:after {
+                                content: '';
+                                position: absolute;
+                                top: 95%;
+                                width: 150%;
+                                aspect-ratio: 3 / 1;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                                border-radius: 50%;
+                                border: 6px solid hsl(280 80% 50%);
+                                /* Use a conic gradient mask to hide and show the bits you want */
+                                --spread: 140deg;
+                                --start: 290deg;
+                                mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+                            }
+
+
+                            .underline-overflow {
+                                display: inline-block;
+                                /* A little extra padding and overflow hidden   */
+                                overflow: hidden;
+                                padding-bottom: clamp(1rem, 2vmin, 2rem);
+                            }
+
+                            .underline-overflow:after {
+                                content: '';
+                                position: absolute;
+                                top: 100%;
+                                height: 150%;
+                                aspect-ratio: 2.5 / 1;
+                                left: 50%;
+                                transform: translate(-50%, -10%);
+                                border-radius: 50%;
+                                border: 6px solid hsl(10 80% 50%);
+                            }
+
+                            .underline-clip:after {
+                                content: '';
+                                position: absolute;
+                                top: 95%;
+                                width: 150%;
+                                aspect-ratio: 3 / 1;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                                border-radius: 50%;
+                                border: 6px solid hsl(130 80% 50%);
+                                /* Use a clip-path to hide and show the bits you want */
+                                clip-path: polygon(0 0, 50% 50%, 100% 0);
+                            }
+
+                            @media only screen and (max-width: 979px) {
+
+                                h1 {
+                                    font-size: 20px;
+                                    font-weight: 500;
+
+                                }
+                            }
+                        </style>
+
+                        <h1 style="font-weight: bold;">Lessons for
+                            <span class="underlined underline-clip"> 12th
+                                <span style="color: #f2f5fc;">
+                                </span>
+                            </span>Commerce Accounts
+                        </h1>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- This is cards  -->
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-12 entries" style="position: relative; top: -85px;">
+                        <div class="ag-format-container">
+                            <div class="ag-courses_box" id="lessonsContainer">
+                                <!-- Cards will be Dynamically displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("DOM Content Loaded")
+            const testLessons = [
+                {
+                    title: 'Lesson 01 : Relation, Function, and Inverse Trigonometry',
+                    desc: 'Introduction to relations, functions, and inverse trigonometric functions.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 02 : Matrices and Determinants',
+                    desc: 'Exploring matrices, determinants, and their properties and operations.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 03 : Continuity, Differentiability, and Differentiation',
+                    desc: 'Understanding continuity, differentiability, and differentiation of functions.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 04 : Applications of Derivatives',
+                    desc: 'Studying the applications of derivatives in various contexts.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 05 : Integrals',
+                    desc: 'Learning about indefinite and definite integrals and their properties.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 06 : Differential Equations',
+                    desc: 'Exploring ordinary differential equations and their solutions.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 07 : Vectors and 3-D Geometry',
+                    desc: 'Understanding vectors and three-dimensional geometry concepts.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 08 : Linear Programming',
+                    desc: 'Studying linear programming problems and their solutions.',
+                    link: '',
+                },
+                {
+                    title: 'Lesson 09 : Probability',
+                    desc: 'Exploring probability theory and its applications.',
+                    link: '',
+                },
+            ];
+
+            const lessonsContainer = document.getElementById("lessonsContainer");
+
+            testLessons.forEach(lesson => {
+                const lessonCard = document.createElement("div");
+                lessonCard.className = "ag-courses_item";
+                lessonCard.innerHTML = `
+                    <a href="${lesson.link}" class="ag-courses-item_link" target = "_blank">
+                        <div class="ag-courses-item_title">${lesson.title}</div>
+                        <p>${lesson.desc}</p>
+                    </a>
+                `;
+                lessonsContainer.appendChild(lessonCard);
+            });
+        });
+    </script>
+
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a> -->
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./script.js"></script>
+    <script>
+        $(".book").mouseenter(function () {
+            $(this).parent(".book-wrap").addClass("rotate");
+        });
+
+        $(".book").mouseleave(function () {
+            $(this).parent(".book-wrap").removeClass("rotate");
+        });
+
+        $(".book").click(function () {
+            $(this).parent(".book-wrap").addClass("flip");
+        });
+
+        $(".book-back").click(function () {
+            $(this).parent(".book-wrap").removeClass("flip");
+        });
+    </script>
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
